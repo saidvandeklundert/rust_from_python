@@ -1,6 +1,6 @@
-# rust_from_python
+# Calling Rust from Python
 
-Example where Rust is being called from Python. In the examples, I used CPython 3.9.2 and Rust 1.56.0. 
+Example where Rust is being called from Python. In the examples, I used CPython 3.9.2 and Rust 1.56.0. The Rust code relies on the std. The Python side relies on `ctypes`, something that comes with Python.
 ## rust_lib_1
 
 Contains Rust code that can be called from Python to print strings and integers.
