@@ -8,7 +8,7 @@ fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
 
 /// Multiply two numbers.
 #[pyfunction]
-fn multiply(a: usize, b: usize) -> PyResult<usize> {
+fn multiply(a: i32, b: i32) -> PyResult<i32> {
     Ok(a * b)
 }
 
