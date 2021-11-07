@@ -6,6 +6,16 @@ fn multiply(a: isize, b: isize) -> PyResult<isize> {
     Ok(a * b)
 }
 
+/// Return the sum of a list/vector of numbers
+#[pyfunction]
+fn list_sum(a: Vec<isize>) -> PyResult<isize> {
+    let mut sum: isize = 0;
+    for i in a {
+        sum += i;
+    }
+    Ok(sum)
+}
+
 /// Formats the sum of two numbers as string.
 #[pyfunction]
 fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
@@ -19,5 +29,6 @@ fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
 fn pyo3_examples(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(sum_as_string, m)?)?;
     m.add_function(wrap_pyfunction!(multiply, m)?)?;
+    m.add_function(wrap_pyfunction!(list_sum, m)?)?;
     Ok(())
 }
