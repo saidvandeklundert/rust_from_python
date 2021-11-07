@@ -1,5 +1,5 @@
-import pyo3_example
+import pyo3_examples
 
 
 if __name__ == "__main__":
-    pyo3_example.sum_as_string(5, 20)
+    pyo3_examples.sum_as_string(5, 20)
